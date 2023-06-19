@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "plugins": [ 
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-notifications",
+        {
+          "icon": "../assets/c.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./local/assets/notification-sound-other.wav",
+            "./local/assets/notification-sound.wav"
+          ]
+        }
+      ]
+    ],
+    "name": "DoIt",
+    "slug": "DoIt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/task.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+    "backgroundColor": "#25292e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": true
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/task.png",
+        "backgroundColor": "#000000"
+      }
+    },
+    "web": {
+      "favicon": "./assets/task.png"
+    }
+  }
+}
