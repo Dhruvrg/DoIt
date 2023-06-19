@@ -47,12 +47,6 @@ const Header = () => {
             onChangeText={(value) => setTaskSearch(value)}
           />
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate("Users")}>
-          <Image
-            style={{ height: 25, width: 25, marginTop: 5 }}
-            source={require("../assets/user-avatar.png")}
-          />
-        </TouchableOpacity>
         <TouchableOpacity onPress={() => setIsModalVisible(!isModalVisible)}>
           <Image
             style={{ height: 25, width: 25, marginTop: 5 }}
@@ -89,7 +83,7 @@ const styles = StyleSheet.create({
   navbarStyle: {
     display: "flex",
     flexDirection: "row",
-    columnGap: 5,
+    columnGap: 7.5,
     backgroundColor: "black",
     paddingHorizontal: 7.5,
     paddingVertical: 5,

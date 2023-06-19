@@ -1,7 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { auth } from "../config/firebase";
 
 const Navbar = () => {
   const navigation = useNavigation();
@@ -17,21 +16,6 @@ const Navbar = () => {
           <Text style={styles.textStyle}>Home</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          auth?.currentUser?.email !== undefined
-            ? navigation.navigate("Message")
-            : navigation.navigate("SignUp");
-        }}
-      >
-        <View style={styles.itemStyle}>
-          <Image
-            style={styles.iconStyle}
-            source={require("../assets/comments.png")}
-          />
-          <Text style={styles.textStyle}>Message</Text>
-        </View>
-      </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Create")}>
         <Image
           style={styles.CreateStyle}
@@ -45,15 +29,6 @@ const Navbar = () => {
             source={require("../assets/checklist.png")}
           />
           <Text style={styles.textStyle}>Tasks</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("Settings")}>
-        <View style={styles.itemStyle}>
-          <Image
-            style={styles.iconStyle}
-            source={require("../assets/settings.png")}
-          />
-          <Text style={styles.textStyle}>Settings</Text>
         </View>
       </TouchableOpacity>
     </View>
